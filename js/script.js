@@ -69,3 +69,11 @@ function scrollToSection (section,tab) {
     scrollTop: $("#"+section).offset().top -coverHeight},
   1000);
 }
+
+function like(ele) {
+  $(ele).attr('src','images/liked.png');
+}
+
+function bookmark (ele) {
+  $(ele).attr('src','images/been-green.png');
+}

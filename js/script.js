@@ -38,11 +38,34 @@ $(document).ready(function() {
   var vTop = $ele.offset().top - parseFloat($ele.css('margin-top').replace(/auto/, 0));
   $(window).scroll(function (event) {
     var y = $(this).scrollTop();
-    if (y >= vTop -65) {
+    if (y >= vTop -65) {      
       $ele.addClass('stick');
     } else {
       $ele.removeClass('stick');
     }
+    // Highlight Nav on scroll
+    $('.sectionWrap').each(function() {
+      if($(window).scrollTop() >= $(this).offset().top -60) {
+        var id = $(this).attr('id');
+        $('ul.nav-tabs li').removeClass('active');
+        $('ul.nav-tabs li[data-target='+ id +']').addClass('active');
+      }
+    });
   });
 
+
 });
+
+//Scroll to Section
+function scrollToSection (section,tab) {
+  var $ele = $('#stickyNav');
+  var coverHeight = 120;
+  if ($ele.hasClass( "stick" )) {
+    coverHeight = 50;
+  }
+  $('ul.nav-tabs li').removeClass('active');
+  $(tab).addClass('active');
+  $('html,body').animate({
+    scrollTop: $("#"+section).offset().top -coverHeight},
+  1000);
+}

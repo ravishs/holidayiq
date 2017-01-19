@@ -53,6 +53,10 @@ $(document).ready(function() {
     });
   });
 
+  //Tooltips
+  $('.documentItem h5').each(function() {
+    $(this).attr('title',$(this).html());
+  });
 
 });
 
@@ -70,10 +74,42 @@ function scrollToSection (section,tab) {
   1000);
 }
 
+var liked = false;
+var been  = false;
 function like(ele) {
-  $(ele).attr('src','images/liked.png');
+  liked = !liked;
+  if (liked) {
+    $(ele).attr('src','images/liked.png');
+  } else {
+    $(ele).attr('src','images/like.png');
+  }
 }
 
 function bookmark (ele) {
-  $(ele).attr('src','images/been-green.png');
+  been = !been;
+  if (been) {
+    $(ele).attr('src','images/been-green.png');
+  } else {
+    $(ele).attr('src','images/been.png');
+  }
+}
+
+function addToWishList (ele) {
+  liked = !liked;
+  if (liked) {
+    $(ele).find('img').attr('src','images/liked.png');
+    $(ele).find('span.msg').html('Added To Wishlist!');
+  } else {
+    $(ele).find('img').attr('src','images/like.png');
+    $(ele).find('span.msg').html('Add To Wishlist');
+  }
+}
+
+function beenHere (ele) {
+  been = !been;
+  if (been) {
+    $(ele).find('img').attr('src','images/been-green.png');
+  } else {
+    $(ele).find('img').attr('src','images/been.png');
+  }
 }

@@ -19,11 +19,48 @@
 
 <body class = "country">
 
-    <!-- hide on large displays -->
-    <div id="mobilescreen" class="hidden-lg hidden-md hidden-sm">
-    <div class="container primary-banner">
+    <!-- NavBar -->
+    <nav class="navbar navbar-fixed-top hidden-xs">
+        <div class="container">
+        
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="javascript:void(0);">
+                    <img alt = "HolidayIQ" src = "images/holidayiq-logo.png" />
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#">International</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Videos</a></li>
+                    <li><a href="#">Add Review</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <form class="navbar-form navbar-left">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search HolidayIQ...">
+                        </div>
+                    </form>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class = "clearNav hidden-xs"></div>
+
+    <!-- Banner -->
+    <div class="primary-banner">
         <div class="row"><div class="col-xs-12">&nbsp;</div></div>
-        <div class="row">
+        <div class="row visible-xs container transBg">
             <div class="col-xs-8">
                 <a href="#"><img src="images/back_white.png" width="20" alt="back"></a>
             </div>
@@ -37,610 +74,8 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-xs-6">
-                <h3 class="locationName">Thailand</h3>
-                <div class="locationRating">
-                    <img src="images/star.png" width="15">
-                    <img src="images/star.png" width="15">
-                    <img src="images/star.png" width="15">
-                    <img src="images/star.png" width="15">
-                    <img src="images/half-star.png" width="15">
-                    <span class="white"><b>4.5/5</b></span>
-                </div>
-            </div>
-            <div class="col-xs-6 text-right" id="quicklinks">
-               <div class="photoVideoCount">
-                    <span class = "blackStrip pvCount leftMargins">
-                        <img alt = "" src="images/photos.png" width = "20" /> 
-                        <span>45</span>
-                    </span>
-                    <span class = "blackStrip pvCount leftMargins">
-                        <img alt = "" src="images/play.png" /> 
-                        <span>7</span>
-                    </span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-xs-12">
-                <p class="title">Beaches, Scuba diving, Buddhist monuments or just Relatation</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container margin-top">
-        <div class="row padding">
-            <div class="col-xs-4 text-center">
-                <img src="images/beaches.svg" width="50">
-                <p class="padding">Beaches</p>
-            </div>
-            <div class="col-xs-4 text-center">
-                <img src="images/adventure.svg" width="50">
-                <p class="padding">Adventure</p>
-            </div>
-            <div class="col-xs-4 text-center">
-                <img src="images/heritage.svg" width="50">
-                <p class="padding">Heritage</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="container margin-top" id = "stickyNav">
-        <div class="row padding">
-            <div class="col-xs-12">
-                <ul class="nav nav-tabs hiddenscrollbars">
-                    <li onClick = "scrollToSection('topAttractionsSection',this);" role="presentation" data-target = "topAttractionsSection" class="active"><a data-toggle="tab" href="javascript:void(0);">Top Attractions</a>
-                    </li>
-                    <li onClick = "scrollToSection('videoReviewsSection',this);" role="presentation" data-target = "videoReviewsSection"><a data-toggle="tab" href="javascript:void(0);">Video Reviews</a>
-                    </li>
-                    <li onClick = "scrollToSection('topItinariesSection',this);" role="presentation" data-target = "topItinariesSection"><a data-toggle="tab" href="javascript:void(0);">Top Itinarary</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- tab content -->
-    <div class="tab-content">
-        <div id="menu1" class="tab-pane fade in active">
-            <!-- Top Attractions -->
-            <div class="container margin-top sectionWrap" id = "topAttractionsSection">
-                <div class="row padding">
-                    <div class="col-xs-8">
-                        <h4>Top Attractions</h4>
-                    </div>
-                    <div class="col-xs-4">
-                        <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="documentList hiddenscrollbars">
-                            <ul class="list-inline" id = "ta">
-                                <li class="documentItem">
-                                    <div class="thumbnail">
-                                        <img id="" src="images/sample.png" width="300" />
-                                        <div class="caption">
-                                            <p><img src="images/photos.png" width="20"> 123</p>
-                                        </div>
-                                    </div>
-                                    <h5>Grand Palace, Bangkok</h5>
-                                    <p>See Temple, Royal Palace, Historical Sites</p>
-                                    <p><span class="label label-success">EVENT</span> <span class = "greyText">Dec 12 - 14</span></p>
-                                </li>
-                                <li class="documentItem">
-                                    <div class="thumbnail">
-                                        <img id="" src="images/sample.png" width="300" />
-                                        <div class="caption">
-                                            <p><img src="images/photos.png" width="20"> 45</p>
-                                        </div>
-                                    </div>
-                                    <h5>Grand Palace, Bangkok</h5>
-                                    <p>See Temple, Royal Palace, Historical Sites</p>
-                                    <p><span class="label label-success">EVENT</span> <span class = "greyText">Dec 12 - 14</span></p>
-                                </li>
-                                <li class="documentItem">
-                                    <div class="thumbnail">
-                                        <img id="" src="images/sample.png" width="300" />
-                                        <div class="caption">
-                                            <p><img src="images/photos.png" width="20"> 12</p>
-                                        </div>
-                                    </div>
-                                    <h5>Grand Palace, Bangkok</h5>
-                                    <p>See Temple, Royal Palace, Historical Sites</p>
-                                    <p><span class="label label-success">EVENT</span> <span class = "greyText">Dec 12 - 14</span></p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Video Reviews -->
-            <div class="container margin-top sectionWrap" id = "videoReviewsSection">
-                <div class="row padding">
-                    <div class="col-xs-8">
-                        <h4>Video Reviews</h4>
-                    </div>
-                    <div class="col-xs-4">
-                        <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="documentList hiddenscrollbars">
-                            <ul class="list-inline" id = "vr">
-                                <li class="documentItem">
-                                    <img src="http://lorempixel.com/200/200/city" width="200">
-                                    <h5>Ko Chang</h5>
-                                    <p>Bangkok</p>
-                                </li>
-                                <li class="documentItem">
-                                    <img src="http://lorempixel.com/200/200/city/2" width="200">
-                                    <h5>Sanctuary of Truth</h5>
-                                    <p>Pattaya</p>
-                                </li>
-                                <li class="documentItem">
-                                    <img src="http://lorempixel.com/200/200/city/3" width="200">
-                                    <h5>Grand Plaza</h5>
-                                    <p>Bangkok</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Top Itinararies -->
-            <div class="container margin-top sectionWrap" id = "topItinariesSection">
-                <div class="row padding">
-                    <div class="col-xs-8">
-                        <h4>Top Itinararies</h4>
-                    </div>
-                    <div class="col-xs-4">
-                        <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="documentList hiddenscrollbars">
-                            <ul class="list-inline" id = "ti">
-                                <li class="documentItem topItinaryIndv">
-                                  <table>
-                                    <tbody>
-                                      <tr>
-                                        <td><img class="center-block" src="http://lorempixel.com/150/175/city/1" style="vertical-align: top;"></td>
-                                        <td class="wrapwidth">
-                                          <p>Phuket, Bangkok, Pattaya, Koh Samui</p>
-                                          <p class="primary"><small>4 nights / 5 days</small></p>
-                                          <p><b>&#8377; 24,000</b> <span class="lighter">onwards</span></p>
-                                          <a class="btn btn-default explore-btn" href="#" role="button">Explore</a>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </li>
-                                <li class="documentItem topItinaryIndv">
-                                  <table>
-                                    <tbody>
-                                      <tr>
-                                        <td><img class="center-block" src="http://lorempixel.com/150/175/city/1" style="vertical-align: top;"></td>
-                                        <td class="wrapwidth">
-                                          <p>Phuket, Bangkok, Pattaya, Koh Samui</p>
-                                          <p class="primary"><small>4 nights / 5 days</small></p>
-                                          <p><b>&#8377; 24,000</b> <span class="lighter">onwards</span></p>
-                                          <a class="btn btn-default explore-btn" href="#" role="button">Explore</a>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </li>
-                                <li class="documentItem topItinaryIndv">
-                                  <table>
-                                    <tbody>
-                                      <tr>
-                                        <td><img class="center-block" src="http://lorempixel.com/150/175/city/1" style="vertical-align: top;"></td>
-                                        <td class="wrapwidth">
-                                          <p>Phuket, Bangkok, Pattaya, Koh Samui</p>
-                                          <p class="primary"><small>4 nights / 5 days</small></p>
-                                          <p><b>&#8377; 24,000</b> <span class="lighter">onwards</span></p>
-                                          <a class="btn btn-default explore-btn" href="#" role="button">Explore</a>
-                                        </td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <div class="container margin-top banner-bg">
-        <div class="row padding">
-            <div class="col-xs-12 text-center">
-                <h4 class="white" style="margin-top:18px;">I'm heading to Thailand</h4>
-            </div>
-        </div>
-        <div class="row">
-            <form>
-                <div class="col-xs-7">
-                    <select class="selectpicker" data-width="100%">
-                        <option>Next Month</option>
-                        <option>Within 3 months</option>
-                        <option>Within 6 months</option>
-                    </select>
-                </div>
-                <div class="col-xs-5">
-                    <button class="btn btn-default btn-block" type="submit">Get Free Guide</button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- Top Destinations -->
-    <div class="container margin-top">
-        <div class="row padding">
-            <div class="col-xs-8">
-                <h4>Top Destinations</h4>
-            </div>
-            <div class="col-xs-4">
-                <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="documentList hiddenscrollbars">
-                    <ul class="list-inline">
-                        <li class="documentItem">
-                            <div class="thumbnail">
-                                <img id="" src="http://lorempixel.com/300/250/city/1" width="200" />
-                                <div class="altcaption">
-                                    <table class="destinations">
-                                      <span>Bangkok</span>
-                                      <tr>
-                                        <td><p><img src="images/photos.png" width="15"> <small>123</small></p></td><td><p><img src="images/play.png" width="15"> <small>12</small></p></td>
-                                      </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="documentItem">
-                            <div class="thumbnail">
-                                <img id="" src="http://lorempixel.com/300/250/city/2" width="200" />
-                                <div class="altcaption">
-                                    <table class="destinations">
-                                      <span>Nepal</span>
-                                      <tr>
-                                        <td><p><img src="images/photos.png" width="15"> <small>123</small></p></td><td><p><img src="images/play.png" width="15"> <small>12</small></p></td>
-                                      </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="documentItem">
-                            <div class="thumbnail">
-                                <img id="" src="http://lorempixel.com/300/250/city/3" width="200" />
-                                <div class="altcaption">
-                                    <table class="destinations">
-                                      <span>Spain</span>
-                                      <tr>
-                                        <td><p><img src="images/photos.png" width="15"> <small>123</small></p></td><td><p><img src="images/play.png" width="15"> <small>12</small></p></td>
-                                      </tr>
-                                    </table>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Getting To -->
-    <div class="container margin-top">
-        <div class="row padding">
-            <div class="col-xs-12">
-                <h4>Getting to Thailand<h4>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-xs-3">
-          <img src="images/visa.png" width="50">
-        </div>
-        <div class="col-xs-9">
-          <span>Visa: On Arrival</span><br>
-          <span class="lighter">Visa cost: 1000 THB (Rs. 2000 approx)</span><br>
-          <span class="primary">View Visa requirement &rsaquo;</span>
-        </div>
-      </div>
-      <div class="row padding">
-        <div class="col-xs-3">
-          <img src="images/flight.png" width="50">
-        </div>
-        <div class="col-xs-9">
-          <span>4 hrs from major Indian cities</span><br>
-          <span class="lighter">Flight cost 7,000 per person</span><br>
-          <span class="primary">Book Flight &rsaquo;</span>
-          <p>&nbsp;</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Best Time to visit -->
-    <div class="container margin-top">
-      <div class="row padding">
-        <div class="col-xs-7">
-          <p>This is the best time to visit Thailand. Head there now!</p>
-        </div>
-        <div class="col-xs-5">
-          <button class="btn btn-primary btn-block btn-sm" type="submit" style="margin-top:5px;" data-toggle="modal" data-target="#quoteModal">Get Free Quote</button>
-        </div>
-      </div>
-    </div>
-
-    <!-- Reviews -->
-    <div class="container margin-top">
-      <div class="row padding">
-        <div class="col-xs-12">
-          <h4>Reviews &amp; Ratings<h4>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2">
-            <img src="http://lorempixel.com/50/50/people/3" width="50" class="img-circle">
-          </div>
-          <div class="col-xs-10">
-            <span class="pull-right"><img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <small>4.0/5</small></span>
-            <h5>Abhishek Jain <br><small>12 Reviews</small></h5>
-            <p>"Impressive Temple"</p>
-            <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-2">
-            <img src="http://lorempixel.com/50/50/people/1" width="50" class="img-circle">
-          </div>
-          <div class="col-xs-10">
-            <span class="pull-right"><img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <small>4.0/5</small></span>
-            <h5>Kumar Saurav <br><small>9 Reviews</small></h5>
-            <p>"Awesome Views"</p>
-            <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></p>
-            <img src="http://lorempixel.com/50/50/sports/3"> <img src="http://lorempixel.com/50/50/sports/1"> <img src="http://lorempixel.com/50/50/sports/2">
-          </div>
-        </div>
-        <div class="row padding">
-          <div class="col-xs-12"><p class="primary">View all Thailand reviews &rarr;</p></div>
-        </div>
-      </div>
-
-
-      <div class="container margin-top">
-        <div class="row padding">
-          <div class="col-xs-12 text-center" id="profilepic">
-            <img src="http://lorempixel.com/42/42/people/7" alt="..." class="img-circle">
-            <img src="http://lorempixel.com/42/42/people/1" alt="..." class="img-circle">
-            <img src="http://lorempixel.com/42/42/people/2" alt="..." class="img-circle">
-            <img src="http://lorempixel.com/42/42/people/3" alt="..." class="img-circle">
-            <img src="http://lorempixel.com/42/42/people/4" alt="..." class="img-circle">
-            <img src="http://lorempixel.com/42/42/people/5" alt="..." class="img-circle">
-            <img src="http://lorempixel.com/42/42/people/6" alt="..." class="img-circle"><span><small>150+</small></span>
-            <p class="margin-top">150 Travellers have planned their trip to Thailand this month</p>
-            <img src="images/flyrectangle.png" alt=""><a href="" class="btn btn-default flybutton" data-toggle="modal" data-target="#quoteModal">Get my free quote now</a>
-            <p></p>
-          </div>
-        </div>
-      </div>
-
-      <div class="container margin-top">
-        <div class="row padding">
-          <div class="col-xs-8">
-            <h4>Thailand Blogs</h4>
-            </div>
-            <div class="col-xs-4">
-                <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="documentList hiddenscrollbars">
-                    <ul class="list-inline" id = "blogList">
-                        <li class="documentItem">
-                            <img id="" src="images/sample.png" width="300" />
-                            <p class="margin-top"><em>“My Scuba dive experience in Thailand”</em>
-                            </p>
-                        </li>
-                        <li class="documentItem">
-                            <img id="" src="images/sample.png" width="300" />
-                            <p class="margin-top"><em>“My Scuba dive experience in Thailand”</em>
-                            </p>
-                        </li>
-                        <li class="documentItem">
-                            <img id="" src="images/sample.png" width="300" />
-                            <p class="margin-top"><em>“My Scuba dive experience in Thailand”</em>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- Travellers also search for -->
-    <div class="container margin-top">
-        <div class="row padding">
-            <div class="col-xs-12">
-                <h4>Travellers also search for</h4>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="documentList hiddenscrollbars">
-                    <ul class="list-inline">
-                        <li class="documentItem">
-                            <img id="" src="http://lorempixel.com/200/150/city/1" width="150" />
-                            <p class="margin-top">Malaysia</p>
-                        </li>
-                        <li class="documentItem">
-                            <img id="" src="http://lorempixel.com/200/150/city/2" width="150" />
-                            <p class="margin-top">Sri Lanka</p>
-                        </li>
-                        <li class="documentItem">
-                            <img id="" src="http://lorempixel.com/200/150/city/3" width="150" />
-                            <p class="margin-top">Singapore</p>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Read more about Thailand -->
-    <div class="container margin-top">
-        <div class="row padding">
-            <div class="col-xs-12">
-                <h4>Read more about Thailand</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                <p><a href="#">Read More</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="container margin-top">
-        <div class="row">
-            <div class="col-xs-12">
-                <div class="list-group">
-                    <button type="button" class="list-group-item">Hotels in Thailand <span class="pull-right"><img src="images/arrow.png" width="8"></span>
-                    </button>
-                    <button type="button" class="list-group-item">Tips and tricks while visiting <span class="pull-right"><img src="images/arrow.png" width="8"></span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-    <!-- static footer with buttons -->
-    <nav class="navbar navbar-default navbar-fixed-bottom" role="navigation">
-        <div class="btn-group btn-group-justified" role="group" aria-label="...">
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-default btn-lg btn-padding">Add Photo/Review</button>
-            </div>
-            <div class="btn-group" role="group">
-                <button type="button" class="btn btn-primary btn-lg btn-padding" data-toggle="modal" data-target="#quoteModal">Plan a Trip</button>
-            </div>
-        </div>
-    </nav>
-    <!-- hide on large -->
-    </div>
-
-    <!-- Popup when CTAs clicked -->
-    <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="">
-        <div class="modal-header">
-            <h3>Get a free travel Guide</h3>
-            <p>We have a customized travel guide waiting for you.</p>
-        </div>
-        <div class="modal-body">
-            <form>
-                <div class="form-group marginMed">
-                    <label class = "light greyText">Enter Destination</label>
-                    <input type="text" class="form-control" id="" placeholder="Thailand">
-                    <div class="row">
-                        <div class="col-md-8 col-xs-8">
-                            <p></p>
-                            <label class = "light greyText">I am travelling</label>
-                            <select class="selectpicker borderDark">
-                                <option value="">In the next month</option>
-                            </select>
-                        </div>
-                        <div class="col-md-4 col-xs-4">
-                            <p></p>
-                            <label class = "light greyText">People</label>
-                            <select class="selectpicker borderDark">
-                                <option value="">2</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="row marginMed">
-                        <div class="col-md-12">
-                            <h5 class = "light">My contact details</h5>
-                            <input type="text" class="form-control" id="" placeholder="Name*">
-                            <p></p>
-                            <input type="email" class="form-control" id="" placeholder="Email Id*">
-                            <p></p>
-                            <input type="text" class="form-control" id="" placeholder="Source City*">
-                            <p></p>
-                            <a class="btn btn-primary btn-block roundBtn" href="#" role="button">Send me my free travel guide</a>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-        <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
-        </div>
-    </div>
-
-<!--
-############################################## Desktop Version Begins ##############################################
--->
-    <!-- hide on small -->
-
-    <div class="hidden-xs whitebg">
-        <!-- NavBar -->
-        
-        <nav class="navbar navbar-fixed-top">
-            <div class="container">
-            
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="javascript:void(0);">
-                        <img alt = "HolidayIQ" src = "images/holidayiq-logo.png" />
-                    </a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-                        <li><a href="#">International</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Videos</a></li>
-                        <li><a href="#">Add Review</a></li>
-                    </ul>
-                    <ul class="nav navbar-nav navbar-right">
-                        <form class="navbar-form navbar-left">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search HolidayIQ...">
-                            </div>
-                        </form>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    
-
-
-
-        <div class = "clearNav"></div>
-        <!-- Top Banner -->
-        <div class = "primary-banner">
-            <div class="container transBg">
-                <div class="row">
-                  <div class="col-md-10 col-sm-8">
+            <div class = "container transBg relative">
+                <div class="col-xs-6 negatePadding" id = "destMain">
                     <h3 class="locationName">Thailand</h3>
                     <div class="locationRating">
                         <img src="images/star.png" width="15">
@@ -649,61 +84,248 @@
                         <img src="images/star.png" width="15">
                         <img src="images/half-star.png" width="15">
                         <span class="white"><b>4.5/5</b></span>
-                        <p></p>
-                        <a href = "javascript:void(0);" class = "animateOnClick bigger">
-                            <span class = "blackStrip">
-                                <img alt = "" src = "images/been-here.png" />
-                                <span>Been Here</span>
-                            </span>
-                        </a>
-                        <a href = "javascript:void(0);" class = "animateOnClick bigger">
-                            <span class = "blackStrip">
-                                <img alt = "" src = "images/like.png" />
-                                <span>Add To WishList</span>
-                            </span>
-                        </a>
+                        <span class = "hidden-xs">
+                            <p></p>
+                            <a href = "javascript:void(0);" class = "animateOnClick bigger">
+                                <span class = "blackStrip">
+                                    <img alt = "" src = "images/been-here.png" />
+                                    <span>Been Here</span>
+                                </span>
+                            </a>
+                            <a href = "javascript:void(0);" class = "animateOnClick bigger">
+                                <span class = "blackStrip">
+                                    <img alt = "" src = "images/like.png" />
+                                    <span>Add To WishList</span>
+                                </span>
+                            </a>
+                        </span>
                     </div>
-                  </div>
-                  <div class="col-md-2 col-sm-4 photoVideoCount">
-                    <span class = "blackStrip pvCount">
-                        <img alt = "" src="images/photos.png" /> 
-                        <span>45</span>
-                    </span>
-                    <span class = "blackStrip pvCount">
-                        <img alt = "" src="images/play.png" /> 
-                        <span>7</span>
-                    </span>
-                  </div>
+                </div>
+                <div class="col-xs-6 text-right" id="quicklinks">
+                   <div class="photoVideoCount">
+                        <span class = "blackStrip pvCount leftMargins">
+                            <img alt = "" src="images/photos.png" width = "20" /> 
+                            <span>45</span>
+                        </span>
+                        <span class = "blackStrip pvCount leftMargins">
+                            <img alt = "" src="images/play.png" /> 
+                            <span>7</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>
+    </div> <!-- Component: Banner -->
 
-        <!-- Main Content -->
-        <div class="container">
-            <!-- Left Hand Side -->
-            <div class="row">
-                <div class = "col-md-8 col-sm-8 leftPane">
-                    <p class="title">Beaches, Scuba diving, Buddhist monuments or just Relatation</p>
-                    <!-- Tagging / Interests -->
-                    <div class="row placeHighlights col-md-12">
-                        
-                        <div class="col-md-4 col-sm-4 ">
-                            <a href = "javascript:void(0);">
-                                <img src="images/beaches.svg"> <span>Beaches</span>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <a href = "javascript:void(0);">
-                                <img src="images/adventure.svg"> <span>Adventures</span>
-                            </a>
-                        </div>
-                        <div class="col-md-4 col-sm-4">
-                            <a href = "javascript:void(0);">
-                                <img src="images/heritage.svg"> <span>Heritage</span>
-                            </a>
+    <!-- Main Contents -->
+    <div class = "container">
+        <div class = "row">
+            <!-- Left Pane for desktops: Full width for xs devices -->
+            <div class = "col-md-8 col-sm-8 col-xs-12 leftPane">
+                <p class="title">Beaches, Scuba diving, Buddhist monuments or just Relatation</p>
+                <!-- Tagging / Interests -->
+                <div class="row placeHighlights col-md-12 margin-top borderLight">
+                    
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <a href = "javascript:void(0);">
+                            <img src="images/beaches.svg"> <span>Beaches</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <a href = "javascript:void(0);">
+                            <img src="images/adventure.svg"> <span>Adventure</span>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-xs-4">
+                        <a href = "javascript:void(0);">
+                            <img src="images/heritage.svg"> <span>Heritage</span>
+                        </a>
+                    </div>
+                </div> <!-- Tagging / Interests -->
+                <div class = "clearfix"></div>
+
+                <!-- Mobile Nav: Visible on xs only -->
+                <div class="row container margin-top visible-xs borderLight" id = "stickyNav">
+                    <div class="row padding">
+                        <div class="col-xs-12">
+                            <ul class="nav nav-tabs hiddenscrollbars">
+                                <li onClick = "scrollToSection('topAttractionsSection',this);" role="presentation" data-target = "topAttractionsSection" class="active"><a data-toggle="tab" href="javascript:void(0);">Top Attractions</a>
+                                </li>
+                                <li onClick = "scrollToSection('videoReviewsSection',this);" role="presentation" data-target = "videoReviewsSection"><a data-toggle="tab" href="javascript:void(0);">Video Reviews</a>
+                                </li>
+                                <li onClick = "scrollToSection('topItinariesSection',this);" role="presentation" data-target = "topItinariesSection"><a data-toggle="tab" href="javascript:void(0);">Top Itinarary</a>
+                                </li>
+                                <li onClick = "scrollToSection('gettingThereSection',this);" role="presentation" data-target = "gettingThereSection"><a data-toggle="tab" href="javascript:void(0);">Getting There</a>
+                                </li>
+                                <li onClick = "scrollToSection('destinationsSection',this);" role="presentation" data-target = "destinationsSection"><a data-toggle="tab" href="javascript:void(0);">Destinations</a>
+                                </li>
+                                <li onClick = "scrollToSection('reviewsSection',this);" role="presentation" data-target = "reviewsSection"><a data-toggle="tab" href="javascript:void(0);">Reviews</a>
+                                </li>
+                                <li onClick = "scrollToSection('blogSection',this);" role="presentation" data-target = "blogSection"><a data-toggle="tab" href="javascript:void(0);">Blog</a>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                    <div class = "clearfix"></div>
+                </div>
+
+                <!-- tab content : Top Attractions / Video reviews / Top Itineries -->
+                <div class="row tab-content visible-xs">
+                    <div id="menu1" class="tab-pane fade in active">
+                        <!-- Top Attractions -->
+                        <div class="container margin-top sectionWrap" id = "topAttractionsSection">
+                            <div class="row padding">
+                                <div class="col-xs-8">
+                                    <h4>Top Attractions</h4>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="documentList hiddenscrollbars">
+                                        <ul class="list-inline" id = "ta">
+                                            <li class="documentItem">
+                                                <div class="thumbnail">
+                                                    <img id="" src="images/sample.png" width="300" />
+                                                    <div class="caption">
+                                                        <p><img src="images/photos.png" width="20"> 123</p>
+                                                    </div>
+                                                </div>
+                                                <h5>Grand Palace, Bangkok</h5>
+                                                <p>See Temple, Royal Palace, Historical Sites</p>
+                                                <p><span class="label label-success">EVENT</span> <span class = "greyText">Dec 12 - 14</span></p>
+                                            </li>
+                                            <li class="documentItem">
+                                                <div class="thumbnail">
+                                                    <img id="" src="images/sample.png" width="300" />
+                                                    <div class="caption">
+                                                        <p><img src="images/photos.png" width="20"> 45</p>
+                                                    </div>
+                                                </div>
+                                                <h5>Grand Palace, Bangkok</h5>
+                                                <p>See Temple, Royal Palace, Historical Sites</p>
+                                                <p><span class="label label-success">EVENT</span> <span class = "greyText">Dec 12 - 14</span></p>
+                                            </li>
+                                            <li class="documentItem">
+                                                <div class="thumbnail">
+                                                    <img id="" src="images/sample.png" width="300" />
+                                                    <div class="caption">
+                                                        <p><img src="images/photos.png" width="20"> 12</p>
+                                                    </div>
+                                                </div>
+                                                <h5>Grand Palace, Bangkok</h5>
+                                                <p>See Temple, Royal Palace, Historical Sites</p>
+                                                <p><span class="label label-success">EVENT</span> <span class = "greyText">Dec 12 - 14</span></p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Video Reviews -->
+                        <div class="container margin-top sectionWrap borderLight" id = "videoReviewsSection">
+                            <div class="row padding">
+                                <div class="col-xs-8">
+                                    <h4>Video Reviews</h4>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="documentList hiddenscrollbars">
+                                        <ul class="list-inline" id = "vr">
+                                            <li class="documentItem">
+                                                <img src="http://lorempixel.com/200/200/city" width="200">
+                                                <h5>Ko Chang</h5>
+                                                <p>Bangkok</p>
+                                            </li>
+                                            <li class="documentItem">
+                                                <img src="http://lorempixel.com/200/200/city/2" width="200">
+                                                <h5>Sanctuary of Truth</h5>
+                                                <p>Pattaya</p>
+                                            </li>
+                                            <li class="documentItem">
+                                                <img src="http://lorempixel.com/200/200/city/3" width="200">
+                                                <h5>Grand Plaza</h5>
+                                                <p>Bangkok</p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Top Itineraries -->
+                        <div class="container margin-top sectionWrap borderLight" id = "topItinariesSection">
+                            <div class="row padding">
+                                <div class="col-xs-8">
+                                    <h4>Top Itineraries</h4>
+                                </div>
+                                <div class="col-xs-4">
+                                    <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="documentList hiddenscrollbars">
+                                        <ul class="list-inline" id = "ti">
+                                            <li class="documentItem topItinaryIndv">
+                                              <table>
+                                                <tbody>
+                                                  <tr>
+                                                    <td><img class="center-block" src="http://lorempixel.com/150/175/city/1" style="vertical-align: top;"></td>
+                                                    <td class="wrapwidth">
+                                                      <p>Phuket, Bangkok, Pattaya, Koh Samui</p>
+                                                      <p class="primary"><small>4 nights / 5 days</small></p>
+                                                      <p><b>&#8377; 24,000</b> <span class="lighter">onwards</span></p>
+                                                      <a class="btn btn-default explore-btn" href="#" role="button">Explore</a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </li>
+                                            <li class="documentItem topItinaryIndv">
+                                              <table>
+                                                <tbody>
+                                                  <tr>
+                                                    <td><img class="center-block" src="http://lorempixel.com/150/175/city/1" style="vertical-align: top;"></td>
+                                                    <td class="wrapwidth">
+                                                      <p>Phuket, Bangkok, Pattaya, Koh Samui</p>
+                                                      <p class="primary"><small>4 nights / 5 days</small></p>
+                                                      <p><b>&#8377; 24,000</b> <span class="lighter">onwards</span></p>
+                                                      <a class="btn btn-default explore-btn" href="#" role="button">Explore</a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </li>
+                                            <li class="documentItem topItinaryIndv">
+                                              <table>
+                                                <tbody>
+                                                  <tr>
+                                                    <td><img class="center-block" src="http://lorempixel.com/150/175/city/1" style="vertical-align: top;"></td>
+                                                    <td class="wrapwidth">
+                                                      <p>Phuket, Bangkok, Pattaya, Koh Samui</p>
+                                                      <p class="primary"><small>4 nights / 5 days</small></p>
+                                                      <p><b>&#8377; 24,000</b> <span class="lighter">onwards</span></p>
+                                                      <a class="btn btn-default explore-btn" href="#" role="button">Explore</a>
+                                                    </td>
+                                                  </tr>
+                                                </tbody>
+                                              </table>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Description and action buttons: Desktop -->
+                <div class = "hidden-xs">
                     <!-- Description -->
                     <p></p>
                     <p class="padding text-justify">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<a href="#">See More</a></p>
@@ -713,7 +335,10 @@
                     <p>
                         <a href="javascript:void(0);"><img src="images/add-review.png"></a> <a href="javascript:void(0);" ><img src="images/add-photos.png"></a> <a href="javascript:void(0);"><img src="images/plan-trip.png"></a>
                     </p>
-                    
+                </div> <!-- Description and action buttons: Desktop -->
+
+                <!-- Desktop Content: Top Attractions / Video Reviews / Top Itineries -->
+                <div class = "hidden-xs">
                     <!-- Top Attractions -->
                     <div class = "row marginBig">
                         <div class="col-md-6 col-sm-6">
@@ -846,7 +471,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> <!-- Video Reviews -->
+                    </div> <!-- Top Attractions -->
 
                     <!-- Video Reviews -->
                     <div class = "row marginBig">
@@ -977,7 +602,7 @@
                     <!-- Top Itineries -->
                     <div class = "row marginBig">
                         <div class="col-md-6 col-sm-6">
-                            <h4>Top Itinararies</h4>
+                            <h4>Top Itineraries</h4>
                         </div> 
                         <div class="col-md-6 col-sm-6 text-right">
                             <a class="btn btn-default explore-btn" href="#" role="button">View All</a>
@@ -1051,29 +676,90 @@
                             </ul>
                         </div>
                     </div> <!-- Top Itineries -->
+                </div> <!-- Desktop Content: Top Attractions / Video Reviews / Top Itineries -->
 
-                    <!-- Heading to section -->
-                    <div class="marginBig banner-bg">
-                        <div class="col-md-12 text-center">
-                            <h3 class="white headingTo">I'm heading to Thailand</h3>
-                            <form>
-                                
-                                <div class="col-md-2 col-sm-2"></div>
-                                <div class="col-md-4 col-sm-4">
-                                    <select class="selectpicker" data-width="100%">
-                                        <option>Next Month</option>
-                                        <option>Within 3 months</option>
-                                        <option>Within 6 months</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4 col-sm-4"><button class="btn btn-default btn-block roundBtn" type="submit">Get Free Travel Guide</button></div>
-                                <div class="col-md-2"></div>
-                            </form>
-                        </div>
-                    </div> <!-- Heading to -->
+                <!-- I'm heading to <destination> -->
+                <div class="marginBig banner-bg row borderLight">
+                    <div class="col-xs-12 text-center">
+                        <h3 class="white headingTo">I'm heading to Thailand</h3>
+                        <form>
+                            <div class="col-md-4 col-sm-4 col-sm-offset-2 col-xs-6 noPadding">
+                                <select class="selectpicker" data-width="100%">
+                                    <option>Next Month</option>
+                                    <option>Within 3 months</option>
+                                    <option>Within 6 months</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4 col-xs-6 rightPaddingZero"><button class="btn btn-default btn-block roundBtn freeTravelGuide" type="submit">Get Free Travel Guide</button></div>
+                        </form>
+                    </div>
+                </div> <!-- Heading to -->
 
 
+                <!-- Top Destinations: Mobile -->
+                <div class = "row visible-xs borderLight sectionWrap" id = "destinationsSection">
                     <!-- Top Destinations -->
+                    <div class="container margin-top">
+                        <div class="row padding">
+                            <div class="col-xs-8">
+                                <h4>Top Destinations</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="documentList hiddenscrollbars">
+                                    <ul class="list-inline">
+                                        <li class="documentItem">
+                                            <div class="thumbnail">
+                                                <img id="" src="http://lorempixel.com/300/250/city/1" width="200" />
+                                                <div class="altcaption">
+                                                    <table class="destinations">
+                                                      <span>Bangkok</span>
+                                                      <tr>
+                                                        <td><p><img src="images/photos.png" width="15"> <small>123</small></p></td><td><p><img src="images/play.png" width="15"> <small>12</small></p></td>
+                                                      </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="documentItem">
+                                            <div class="thumbnail">
+                                                <img id="" src="http://lorempixel.com/300/250/city/2" width="200" />
+                                                <div class="altcaption">
+                                                    <table class="destinations">
+                                                      <span>Nepal</span>
+                                                      <tr>
+                                                        <td><p><img src="images/photos.png" width="15"> <small>123</small></p></td><td><p><img src="images/play.png" width="15"> <small>12</small></p></td>
+                                                      </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li class="documentItem">
+                                            <div class="thumbnail">
+                                                <img id="" src="http://lorempixel.com/300/250/city/3" width="200" />
+                                                <div class="altcaption">
+                                                    <table class="destinations">
+                                                      <span>Spain</span>
+                                                      <tr>
+                                                        <td><p><img src="images/photos.png" width="15"> <small>123</small></p></td><td><p><img src="images/play.png" width="15"> <small>12</small></p></td>
+                                                      </tr>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- Top Destinations: Mobile -->
+
+                <!-- Top Destinations: Desktop -->
+                <div class = "hidden-xs">
                     <div class = "row marginBig">
                        <div class="col-md-6">
                             <h4>Top Destinations</h4>
@@ -1211,91 +897,123 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> <!-- Top Destinations -->
+                    </div>
+                </div> <!-- Top Destinations: Desktop -->
 
-                    <!-- Getting To - Destination -->
-                    <div class = "row marginBig">
-                        <div class = "col-md-12">
+                <!-- Getting to <dest> -->
+                <div class="row margin-top borderLight sectionWrap" id = "gettingThereSection">
+                    <div class="padding">
+                        <div class="col-xs-12">
                             <h4>Getting to Thailand</h4>
                         </div>
-                        <div class = "col-md-12">
-                            <div class = "row marginBig gettingToDestDetails">
-                                <div class = "col-md-2 col-sm-2">
-                                    <img src="images/visa.png" class = "img-responsive" alt = "Visa" />
-                                </div>
-                                <div class = "col-md-4 col-sm-4 visaDetails">
-                                    <span>
-                                        <span>Visa: On Arrival</span><br>
-                                        <small class="greyText">Visa cost: 1000 THB (Rs. 2000 approx)</small><br>
-                                        <span class="primary">View Visa requirement &rsaquo;</span>
-                                    </span>
-                                </div>
-                                <div class = "col-md-2 col-sm-2 flightImg">
-                                    <img src="images/flight.png" class = "img-responsive" alt = "Flights" />
-                                </div>
-                                <div class = "col-md-4 col-sm-4">
-                                    <span class = "flightDetails">
-                                        <span>Transit Time: 4 hrs from major Indian cities</span><br>
-                                        <small class="greyText">Flight cost 7,000 per person</small><br>
-                                        <span class="primary">Book Flight &rsaquo;</span>
-                                    </span>
-                                </div>
+                    </div>
+                    <div class="clearfix padding gettingToDestDetails">
+                        <div class = "padding marginBig">
+                            <div class="col-xs-3 col-sm-2">
+                                <img src="images/visa.png" class = "img-responsive" >
+                            </div>
+                            <div class="col-xs-9 col-md-4 col-sm-4 visaDetails">
+                                <span>Visa: On Arrival</span><br>
+                                <span class="greyText">Visa cost: 1000 THB (Rs. 2000 approx)</span><br>
+                                <span class="primary">View Visa requirement &rsaquo;</span>
+                            </div>
+                            <div class="col-xs-3 col-sm-2 gettingToDestDetails flightImg">
+                                <img src="images/flight.png" >
+                            </div>
+                            <div class="col-xs-9 col-md-4 col-sm-4 flightDetails">
+                                <span>4 hrs from major Indian cities</span><br>
+                                <span class="greyText">Flight cost 7,000 per person</span><br>
+                                <span class="primary">Book Flight &rsaquo;</span>
+                                <p>&nbsp;</p>
                             </div>
                         </div>
                     </div>
+                </div> <!-- Getting To <Destination> -->
 
-                    <!-- Ad Placeholder -->
-                    <div class = "marginBig">
-                        <img alt = "" src = "images/ad.png" class = "img-responsive" />
-                    </div> <!-- Ad Placeholder -->
-
-                    <div class = "row marginBig">
-                        <div class="col-md-6 col-sm-6">
-                            <h4>Reviews & Ratings</h4>
+                <!-- Best Time To Visit: mobile Only -->
+                <div class = "row visible-xs borderLight">
+                    <div class="container">
+                      <div class="row padding">
+                        <div class="col-xs-7">
+                          <p>This is the best time to visit Thailand. Head there now!</p>
                         </div>
-                        <div class="col-md-6 col-sm-6 text-right">
+                        <div class="col-xs-5">
+                          <button class="btn btn-primary btn-block btn-sm" type="submit" style="margin-top:5px;" data-toggle="modal" data-target="#quoteModal">Get Free Quote</button>
+                        </div>
+                      </div>
+                    </div>
+                </div> <!-- Best Time To Visit -->
+
+                <!-- Ad Placeholder -->
+                <div class = "marginBig hidden-xs">
+                    <img alt = "" src = "images/ad.png" class = "img-responsive" />
+                </div> <!-- Ad Placeholder -->
+
+
+                <!-- Reviews and Ratings -->
+                <div class="row margin-top borderLight marginBig commentWrapper sectionWrap" id = "reviewsSection">
+                    <div class="padding">
+                        <div class="col-xs-12 col-sm-6">
+                            <h4>Reviews &amp; Ratings</h4>
+                        </div>
+                        <div class="col-md-6 col-sm-6 text-right hidden-xs">
                             <a class="btn btn-default explore-btn" href="#" role="button">View All</a>
                         </div>
-                        <div class = "col-lg-12">
-                            <div class="row marginBig commentWrapper">
-                                <div class="col-md-1 col-sm-3">
-                                    <img src="http://lorempixel.com/50/50/people/3" class="img-circle" />
-                                </div>
-                                <div class="col-md-11 col-sm-9">
-                                    <span class="pull-right">
-                                        <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <small>4.0/5</small>
-                                    </span>
-                                    <h4>Abhishek Jain</h4>
-                                    <small class = "greyText">12 Reviews</small><br/>
-                                    <p></p>
-                                    <b>"Impressive Temple"</b>
-                                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></p>
-                                </div>
-                            </div> <!-- Comment -->
-                            <div class="row marginBig commentWrapper">
-                                <div class="col-md-1 col-sm-3">
-                                    <img src="http://lorempixel.com/50/50/people/3" class="img-circle" />
-                                </div>
-                                <div class="col-md-11 col-sm-9">
-                                    <span class="pull-right">
-                                        <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <small>4.0/5</small>
-                                    </span>
-                                    <h4>Abhishek Jain</h4>
-                                    <small class = "greyText">12 Reviews</small><br/>
-                                    <p></p>
-                                    <b>"Impressive Temple"</b>
-                                    <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></p>
-                                    <p class = "commentImg">
-                                        <img alt = "" src = "images/imgsmall.png" />
-                                        <img alt = "" src = "images/imgsmall.png" />
-                                        <img alt = "" src = "images/imgsmall.png" />
-                                        <img alt = "" src = "images/imgsmall.png" />
-                                    </p>
-                                </div>
-                            </div> <!-- Comment -->
-                        </div>
-                    </div> <!-- Reviews & Ratings -->
+                    </div>
+                    <div class = "clearfix"></div>
 
+                    <div class="clearfix marginBig commentIndv">
+                        <div class="col-xs-2 col-sm-1">
+                            <img src="http://lorempixel.com/50/50/people/3" width="50" class="img-circle">
+                        </div>
+                        <div class="col-xs-10 col-sm-11">
+                            <span class="pull-right"><img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <small>4.0/5</small></span>
+                            <h5>Abhishek Jain <br><small>12 Reviews</small></h5>
+                            <p></p>
+                            <p>"Impressive Temple"</p>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></p>
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                        <div class="col-xs-2 col-sm-1">
+                            <img src="http://lorempixel.com/50/50/people/1" width="50" class="img-circle">
+                        </div>
+                        <div class="col-xs-10 col-sm-11">
+                            <span class="pull-right"><img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <img src="images/star.png" alt="" width="10"> <small>4.0/5</small></span>
+                            <h5>Kumar Saurav <br><small>9 Reviews</small></h5>
+                            <p></p>
+                            <p>"Awesome Views"</p>
+                            <p><small>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</small></p>
+                            <img src="http://lorempixel.com/50/50/sports/3"> <img src="http://lorempixel.com/50/50/sports/1"> <img src="http://lorempixel.com/50/50/sports/2">
+                        </div>
+                    </div>
+                    <div class="padding margin-top visible-xs">
+                        <div class="col-xs-12"><p class="primary">View all Thailand reviews &rarr;</p></div>
+                    </div>
+                </div> <!-- Reviews -->
+
+                <!-- x Number of people : Mobile -->
+                <div class = "visible-xs row borderLight">
+                    <div class="container margin-top">
+                        <div class="row padding">
+                            <div class="col-xs-12 text-center" id="profilepic">
+                                <img src="http://lorempixel.com/42/42/people/7" alt="..." class="img-circle">
+                                <img src="http://lorempixel.com/42/42/people/1" alt="..." class="img-circle">
+                                <img src="http://lorempixel.com/42/42/people/2" alt="..." class="img-circle">
+                                <img src="http://lorempixel.com/42/42/people/3" alt="..." class="img-circle">
+                                <img src="http://lorempixel.com/42/42/people/4" alt="..." class="img-circle">
+                                <img src="http://lorempixel.com/42/42/people/5" alt="..." class="img-circle">
+                                <img src="http://lorempixel.com/42/42/people/6" alt="..." class="img-circle"><span><small>150+</small></span>
+                                <p class="margin-top">150 Travellers have planned their trip to Thailand this month</p>
+                                <img src="images/flyrectangle.png" alt=""><a href="" class="btn btn-default flybutton" data-toggle="modal" data-target="#quoteModal">Get my free quote now</a>
+                                <p></p>
+                            </div>
+                        </div>
+                    </div> 
+                </div> <!-- Number of people visiting <dest> -->
+
+
+                <div class = "hidden-xs">
                     <!-- Best time to visit -->
                     <div class="clearfix marginBig bestTimeToVisit">
                         <div class="col-md-8 col-sm-9 text-center">
@@ -1305,81 +1023,154 @@
                             <a class="btn btn-primary roundBtn" href="javascript:void(0);" role="button">Set hotel price alert</a>
                         </div>
                     </div> <!-- Best Time To Visit -->
+                </div>
+                
 
-                    <!-- Weather Info -->
-                    <div class="clearfix marginBig">
-                        <h4>How's the weather in March</h4>
-                        <div class="row marginBig">
-                            <div class="col-md-2 col-sm-2"><img src="images/weather.png"></div>
-                            <div class="col-md-4 col-sm-4 text-center weatherDetails"><h3>28<sup>o</sup>C<small class = "wType">Mostly Sunny</small></h3></div>
-                            <div class="col-md-4 col-sm-4 text-center weatherDetails"><h3><span class="lighter minMax"><small>min-max</small></span> 20-25 <sup>o</sup>C</h3></div>
-                            <div class="col-md-2 col-sm-2 text-right"><a class="btn btn-default explore-btn" href="#" role="button">Know More</a></div>
-                        </div>
-                    </div> <!-- Weather Info -->
+                <!-- Weather Info -->
+                <div class="clearfix marginBig hidden-xs">
+                    <h4>How's the weather in March</h4>
+                    <div class="row marginBig">
+                        <div class="col-md-2 col-sm-2"><img src="images/weather.png"></div>
+                        <div class="col-md-4 col-sm-4 text-center weatherDetails"><h3>28<sup>o</sup>C<small class = "wType">Mostly Sunny</small></h3></div>
+                        <div class="col-md-4 col-sm-4 text-center weatherDetails"><h3><span class="lighter minMax"><small>min-max</small></span> 20-25 <sup>o</sup>C</h3></div>
+                        <div class="col-md-2 col-sm-2 text-right"><a class="btn btn-default explore-btn" href="#" role="button">Know More</a></div>
+                    </div>
+                </div> <!-- Weather Info -->
 
-                    <!-- Blogs -->
-                    <div class = "row marginBig">
-                        <div class="col-md-6 col-sm-6">
+
+                <!-- Blogs: Mobile -->
+                <div class = "row visible-xs borderLight sectionWrap" id = "blogSection">
+                    <div class="container margin-top">
+                        <div class="row padding">
+                          <div class="col-xs-8">
                             <h4>Thailand Blogs</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h4 class="pull-right primary"><a class = "primary" href = "javascript:void(0);">View All</a></h4>
+                            </div>
                         </div>
-                        <div class="col-md-6 col-sm-6 text-right">
-                            <a class="btn btn-default explore-btn" href="#" role="button">View All</a>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="documentList hiddenscrollbars">
+                                    <ul class="list-inline" id = "blogList">
+                                        <li class="documentItem">
+                                            <img id="" src="images/sample.png" width="300" />
+                                            <p class="margin-top"><em>“My Scuba dive experience in Thailand”</em>
+                                            </p>
+                                        </li>
+                                        <li class="documentItem">
+                                            <img id="" src="images/sample.png" width="300" />
+                                            <p class="margin-top"><em>“My Scuba dive experience in Thailand”</em>
+                                            </p>
+                                        </li>
+                                        <li class="documentItem">
+                                            <img id="" src="images/sample.png" width="300" />
+                                            <p class="margin-top"><em>“My Scuba dive experience in Thailand”</em>
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class = "col-lg-12">
-                            <ul class="list-inline" id = "destBlogs">
-                                <li class="documentItem hvr-float-shadow">
-                                    <div class="thumbnail noMargin">
-                                        <img alt="" src="images/scuba.png"  />
-                                    </div>
-                                    <div class = "placeDetail">
-                                        <i class = "light">"My Scuba diving experience in Thaland"</i>
-                                    </div>
-                                </li>
-                                <li class="documentItem hvr-float-shadow">
-                                    <div class="thumbnail noMargin">
-                                        <img alt="" src="images/scuba.png"  />
-                                    </div>
-                                    <div class = "placeDetail">
-                                        <i class = "light">"My Scuba diving experience in Thaland"</i>
-                                    </div>
-                                </li>
-                                <li class="documentItem hvr-float-shadow">
-                                    <div class="thumbnail noMargin">
-                                        <img alt="" src="images/scuba.png"  />
-                                    </div>
-                                    <div class = "placeDetail">
-                                        <i class = "light">"My Scuba diving experience in Thaland"</i>
-                                    </div>
-                                </li>
-                                <li class="documentItem hvr-float-shadow">
-                                    <div class="thumbnail noMargin">
-                                        <img alt="" src="images/scuba.png"  />
-                                    </div>
-                                    <div class = "placeDetail">
-                                        <i class = "light">"My Scuba diving experience in Thaland"</i>
-                                    </div>
-                                </li>
-                                <li class="documentItem hvr-float-shadow">
-                                    <div class="thumbnail noMargin">
-                                        <img alt="" src="images/scuba.png"  />
-                                    </div>
-                                    <div class = "placeDetail">
-                                        <i class = "light">"My Scuba diving experience in Thaland"</i>
-                                    </div>
-                                </li>
-                                <li class="documentItem hvr-float-shadow">
-                                    <div class="thumbnail noMargin">
-                                        <img alt="" src="images/scuba.png"  />
-                                    </div>
-                                    <div class = "placeDetail">
-                                        <i class = "light">"My Scuba diving experience in Thaland"</i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> <!-- Blogs -->
+                    </div>
+                </div>
+                
+                <!-- Blogs: Desktop -->
+                <div class = "row marginBig hidden-xs">
+                    <div class="col-md-6 col-sm-6">
+                        <h4>Thailand Blogs</h4>
+                    </div>
+                    <div class="col-md-6 col-sm-6 text-right">
+                        <a class="btn btn-default explore-btn" href="#" role="button">View All</a>
+                    </div>
+                    <div class = "col-md-12">
+                        <ul class="list-inline" id = "destBlogs">
+                            <li class="documentItem hvr-float-shadow">
+                                <div class="thumbnail noMargin">
+                                    <img alt="" src="images/scuba.png"  />
+                                </div>
+                                <div class = "placeDetail">
+                                    <i class = "light">"My Scuba diving experience in Thaland"</i>
+                                </div>
+                            </li>
+                            <li class="documentItem hvr-float-shadow">
+                                <div class="thumbnail noMargin">
+                                    <img alt="" src="images/scuba.png"  />
+                                </div>
+                                <div class = "placeDetail">
+                                    <i class = "light">"My Scuba diving experience in Thaland"</i>
+                                </div>
+                            </li>
+                            <li class="documentItem hvr-float-shadow">
+                                <div class="thumbnail noMargin">
+                                    <img alt="" src="images/scuba.png"  />
+                                </div>
+                                <div class = "placeDetail">
+                                    <i class = "light">"My Scuba diving experience in Thaland"</i>
+                                </div>
+                            </li>
+                            <li class="documentItem hvr-float-shadow">
+                                <div class="thumbnail noMargin">
+                                    <img alt="" src="images/scuba.png"  />
+                                </div>
+                                <div class = "placeDetail">
+                                    <i class = "light">"My Scuba diving experience in Thaland"</i>
+                                </div>
+                            </li>
+                            <li class="documentItem hvr-float-shadow">
+                                <div class="thumbnail noMargin">
+                                    <img alt="" src="images/scuba.png"  />
+                                </div>
+                                <div class = "placeDetail">
+                                    <i class = "light">"My Scuba diving experience in Thaland"</i>
+                                </div>
+                            </li>
+                            <li class="documentItem hvr-float-shadow">
+                                <div class="thumbnail noMargin">
+                                    <img alt="" src="images/scuba.png"  />
+                                </div>
+                                <div class = "placeDetail">
+                                    <i class = "light">"My Scuba diving experience in Thaland"</i>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div> <!-- Blogs -->
 
-                    <!-- Travellers also search for -->
+                
+                <!-- Also Search For: Mobile -->
+                <div class = "row visible-xs borderLight">
+                    <div class="container margin-top">
+                        <div class="row padding">
+                            <div class="col-xs-12">
+                                <h4>Travellers also search for</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="documentList hiddenscrollbars">
+                                    <ul class="list-inline">
+                                        <li class="documentItem">
+                                            <img id="" src="http://lorempixel.com/200/150/city/1" width="150" />
+                                            <p class="margin-top">Malaysia</p>
+                                        </li>
+                                        <li class="documentItem">
+                                            <img id="" src="http://lorempixel.com/200/150/city/2" width="150" />
+                                            <p class="margin-top">Sri Lanka</p>
+                                        </li>
+                                        <li class="documentItem">
+                                            <img id="" src="http://lorempixel.com/200/150/city/3" width="150" />
+                                            <p class="margin-top">Singapore</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Also Search for: Desktop -->
+                <div class = "hidden-xs">
                     <div class = "row marginBig">
                         <div class="col-md-6 col-sm-6">
                             <h4>Travellers also search for</h4>
@@ -1455,103 +1246,186 @@
                                 </li>
                             </ul>
                         </div>
-                    </div> <!-- Also search for -->
+                    </div>
+                </div> <!-- Also search for: Desktop -->
 
-                    <!-- Quick Links -->
-                    <div class="clearfix marginBig">
-                        <div class="col-md-6 col-sm-6">
-                            <a class="btn btn-default explore-btn  brandingBtn btn-block" href="#" role="button">Check out hotels in Thailand</a>
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <a class="btn btn-default explore-btn brandingBtn btn-block" href="#" role="button">Tips and tricks while visiting Thailand</a>
-                        </div>
-                    </div> <!-- Quick Links -->
-
-                </div> <!-- LHS -->
-
-
-                <!-- RHS -->
-                <div class = "col-md-3 col-md-offset-1 col-sm-4 sidePanel">
-                    <form class="">
-                        <h3>Get a free travel guide!</h3>
-                        <small class = "smaller">We have a customized travel guide waiting for you</small>
-                        <div class="form-group marginMed">
-                            <label class = "light greyText">Enter Destination</label>
-                            <input type="text" class="form-control" id="" placeholder="Thailand">
-                            <div class="row">
-                                <div class="col-md-8 col-sm-8">
-                                    <p></p>
-                                    <label class = "light greyText">I am travelling</label>
-                                    <select class="selectpicker2">
-                                        <option value="">In the next month</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-4 col-sm-4">
-                                    <p></p>
-                                    <label class = "light greyText">People</label>
-                                    <select class="selectpicker2">
-                                        <option value="">2</option>
-                                    </select>
-                                </div>
+                <!-- Description: Mobile -->
+                <div class = "row visible-xs borderLight">
+                    <div class="container margin-top">
+                        <div class="row padding">
+                            <div class="col-xs-12">
+                                <h4>Read more about Thailand</h4>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                                <p><a href="#">Read More</a>
+                                </p>
                             </div>
-                            <div class="row marginMed">
-                                <div class="col-md-12">
-                                    <h5 class = "light">My contact details</h5>
-                                    <input type="text" class="form-control" id="" placeholder="Name*">
-                                    <p></p>
-                                    <input type="email" class="form-control" id="" placeholder="Email Id*">
-                                    <p></p>
-                                    <input type="text" class="form-control" id="" placeholder="Source City*">
-                                    <p></p>
-                                    <a class="btn btn-primary btn-block roundBtn" href="#" role="button">Send me my free travel guide</a>
-                                </div>
-                            </div>
-                        </div>
-                    </form> <!-- Form -->
-
-                    <!-- popular thailand -->
-                    <div class="row marginMed popularDest">
-                        <div class="col-md-12 text-center" id="profilepic">
-                            <h5 class="primary text-center">Thailand seems to be very popular this season!</h5>
-                            <img src="http://lorempixel.com/42/42/people/7" alt="..." class="img-circle">
-                            <img src="http://lorempixel.com/42/42/people/1" alt="..." class="img-circle">
-                            <img src="http://lorempixel.com/42/42/people/2" alt="..." class="img-circle">
-                            <img src="http://lorempixel.com/42/42/people/5" alt="..." class="img-circle">
-                            <img src="http://lorempixel.com/42/42/people/6" alt="..." class="img-circle"><span><small>150+</small></span>
-                            <p class="margin-top">150 Travellers have planned their trip to Thailand this month</p>
-                            <p></p>
                         </div>
                     </div>
-                    <!-- popular thailand ends -->
+                </div>
+                <!-- Quick Links: Mobile -->
+                <div class = "row visible-xs borderLight">
+                    <!-- Quick Links -->
+                    <div class="container margin-top">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <div class="list-group">
+                                    <button type="button" class="list-group-item">Hotels in Thailand <span class="pull-right"><img src="images/arrow.png" width="8"></span>
+                                    </button>
+                                    <button type="button" class="list-group-item">Tips and tricks while visiting <span class="pull-right"><img src="images/arrow.png" width="8"></span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <!-- Thailand Photos -->
+                <!-- Floadting Buttons : Mobile -->
+                <nav class="navbar navbar-default navbar-fixed-bottom visible-xs" role="navigation">
+                    <div class="btn-group btn-group-justified" role="group" aria-label="...">
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-default btn-lg btn-padding">Add Photo/Review</button>
+                        </div>
+                        <div class="btn-group" role="group">
+                            <button type="button" class="btn btn-primary btn-lg btn-padding" data-toggle="modal" data-target="#quoteModal">Plan a Trip</button>
+                        </div>
+                    </div>
+                </nav>
+
+                <!-- Quick Links: Desktop -->
+                <div class="clearfix marginBig hidden-xs">
+                    <div class="col-md-6 col-sm-6">
+                        <a class="btn btn-default explore-btn  brandingBtn btn-block" href="#" role="button">Check out hotels in Thailand</a>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <a class="btn btn-default explore-btn brandingBtn btn-block" href="#" role="button">Tips and tricks while visiting Thailand</a>
+                    </div>
+                </div> <!-- Quick Links -->
+
+
+            </div> <!-- LHS: Desktops -->
+            <!-- RHS: Hidden for small screens -->
+            <div class = "col-md-3 col-md-offset-1 col-sm-4 sidePanel hidden-xs">
+                <form class="">
+                    <h3>Get a free travel guide!</h3>
+                    <small class = "smaller">We have a customized travel guide waiting for you</small>
+                    <div class="form-group marginMed">
+                        <label class = "light greyText">Enter Destination</label>
+                        <input type="text" class="form-control" id="" placeholder="Thailand">
+                        <div class="row">
+                            <div class="col-md-8 col-sm-8">
+                                <p></p>
+                                <label class = "light greyText">I am travelling</label>
+                                <select class="selectpicker2">
+                                    <option value="">In the next month</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 col-sm-4">
+                                <p></p>
+                                <label class = "light greyText">People</label>
+                                <select class="selectpicker2">
+                                    <option value="">2</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row marginMed">
+                            <div class="col-md-12">
+                                <h5 class = "light">My contact details</h5>
+                                <input type="text" class="form-control" id="" placeholder="Name*">
+                                <p></p>
+                                <input type="email" class="form-control" id="" placeholder="Email Id*">
+                                <p></p>
+                                <input type="text" class="form-control" id="" placeholder="Source City*">
+                                <p></p>
+                                <a class="btn btn-primary btn-block roundBtn" href="#" role="button">Send me my free travel guide</a>
+                            </div>
+                        </div>
+                    </div>
+                </form> <!-- Form -->
+
+                <!-- popular thailand -->
+                <div class="row marginMed popularDest">
+                    <div class="col-md-12 text-center" id="profilepic">
+                        <h5 class="primary text-center">Thailand seems to be very popular this season!</h5>
+                        <img src="http://lorempixel.com/42/42/people/7" alt="..." class="img-circle">
+                        <img src="http://lorempixel.com/42/42/people/1" alt="..." class="img-circle">
+                        <img src="http://lorempixel.com/42/42/people/2" alt="..." class="img-circle">
+                        <img src="http://lorempixel.com/42/42/people/5" alt="..." class="img-circle">
+                        <img src="http://lorempixel.com/42/42/people/6" alt="..." class="img-circle"><span><small>150+</small></span>
+                        <p class="margin-top">150 Travellers have planned their trip to Thailand this month</p>
+                        <p></p>
+                    </div>
+                </div>
+                <!-- popular thailand ends -->
+
+                <!-- Thailand Photos -->
+                <div class="row marginMed">
+                    <h5 class = "light">Thailand Photos</h5>
                     <div class="row marginMed">
-                        <h5 class = "light">Thailand Photos</h5>
-                        <div class="row marginMed">
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                        </div>
-                        <div class="row marginMed">
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                            <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
-                        </div>
-                    </div> <!-- Thailand Photos end -->
-                
-
-                </div> <!-- RHS END -->
-
-
-            </div> 
-        </div> <!-- Container -->
-                
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                    </div>
+                    <div class="row marginMed">
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                        <div class="col-md-3 col-sm-3 rightPaddingZero"><img class = "img-responsive" src="images/imgmed.png" /></div>
+                    </div>
+                </div> <!-- Thailand Photos end -->
             
 
-    <!-- hide on small -->
+            </div> <!-- RHS END -->
+        </div>
     </div>
+
+    <!-- Popup when CTAs clicked -->
+    <div class="modal fade" id="quoteModal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-header">
+            <h3>Get a free travel Guide</h3>
+            <p>We have a customized travel guide waiting for you.</p>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group marginMed">
+                    <label class = "light greyText">Enter Destination</label>
+                    <input type="text" class="form-control" id="" placeholder="Thailand">
+                    <div class="row">
+                        <div class="col-md-8 col-xs-8">
+                            <p></p>
+                            <label class = "light greyText">I am travelling</label>
+                            <select class="selectpicker borderDark">
+                                <option value="">In the next month</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4 col-xs-4">
+                            <p></p>
+                            <label class = "light greyText">People</label>
+                            <select class="selectpicker borderDark">
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row marginMed">
+                        <div class="col-md-12">
+                            <h5 class = "light">My contact details</h5>
+                            <input type="text" class="form-control" id="" placeholder="Name*">
+                            <p></p>
+                            <input type="email" class="form-control" id="" placeholder="Email Id*">
+                            <p></p>
+                            <input type="text" class="form-control" id="" placeholder="Source City*">
+                            <p></p>
+                            <a class="btn btn-primary btn-block roundBtn" href="#" role="button">Send me my free travel guide</a>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+
 
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -1564,5 +1438,4 @@
     <script src="js/script.js"></script>
 
 </body>
-
 </html>

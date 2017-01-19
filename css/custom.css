@@ -29,7 +29,9 @@ body.country*:active {
     background-size: cover;
     min-height: 225px;
 }
-
+.relative {
+    position: relative;
+}
 h3.locationName {
     margin-top: 5em;
     color: #fff;
@@ -44,6 +46,11 @@ h3.locationName {
 .white {
     color: #fff;
     text-shadow: 1px 1px #666;
+}
+
+.placeHighlights a,.placeHighlights a:hover,.placeHighlights a:focus {
+    color:#000;
+    text-decoration: none;
 }
 
 .light {
@@ -422,10 +429,32 @@ h5 {
     top: 0.1em;
 }
 
+.whitebg {
+    background-color: #fff !important;
+}
+
+.gettingToDestDetails img {
+    width:50px;
+}
+
 @media (min-width: 800px) {
-    .whitebg {
-        background-color: #fff !important;
+    body.country {
+        background: #fff;
     }
+    #destMain {
+        position: relative;
+        bottom:20px;
+    }
+    #quicklinks {
+        margin-top:0;
+        position: relative;
+        bottom:20px;
+    }
+    .negatePadding {
+        position: relative;
+        left:-15px;
+    }
+
     .primary-banner {
         min-height: 300px;
         overflow: hidden;
@@ -489,10 +518,6 @@ h5 {
     .placeHighlights img {
         max-width: 60px;
         padding-right: 20px;
-    }
-    .placeHighlights a,.placeHighlights a:hover,.placeHighlights a:focus {
-        color:#000;
-        text-decoration: none;
     }
     p {
         font-size: 0.9em;
@@ -607,9 +632,14 @@ h5 {
         color: #662d91 !important;
     }
     
-    .commentWrapper h4 {
+    .commentWrapper h5 {
         margin-bottom: 0px;
         margin-top: 0;
+        font-weight: 300;
+        font-size:1.2em;
+    }
+    .commentWrapper small {
+        font-size: 0.75em;
     }
     .commentWrapper:last-child {
         border: none;
@@ -640,16 +670,9 @@ h5 {
         position: relative;
         bottom: 4px;
     }
-    .gettingToDestDetails img {
-        height: 70px;
-    }
-    .flightImg {
-        position: l
-    }
     .flightImg {
         position: relative;
         left: 0px;
-        bottom: 10px;
     }
     .flightDetails {
         display: inline-block;
@@ -770,4 +793,42 @@ input[type="text"] {
 }
 .bigger {
     font-size:1.2em;
+}
+
+/* Mobile Only */
+@media (max-width: 800px) {
+    .placeHighlights {
+        text-align: center;
+        padding:10px 0 0px 0;
+    }
+    .placeHighlights img {
+        max-width: 50px;
+    }
+    .placeHighlights span {
+        display: block;
+        padding-top:10px;
+    }
+    .borderLight {
+        border-top:10px solid #f6f8fa;
+    }
+    .headingTo {
+        font-size:1.2em;
+        margin-bottom:25px;
+    }
+    .freeTravelGuide {
+        font-size: 0.9em;
+    }
+    .noPadding {
+        padding:0;
+    }
+    .visaDetails {
+        margin-bottom:10px;
+    }
+    .commentWrapper h5 {
+        margin-top:0;
+    }
+}
+
+.commentIndv {
+    margin: 20px 0;
 }

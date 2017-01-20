@@ -163,6 +163,7 @@ h3.locationName {
 
 .documentItem td {
     padding: 5px;
+    vertical-align: top;
 }
 #blogList em {
     white-space: normal;
@@ -454,7 +455,9 @@ h5 {
         position: relative;
         left:-15px;
     }
-
+    .marginRight {
+        margin-right:10px;
+    }
     .primary-banner {
         min-height: 300px;
         overflow: hidden;
@@ -528,6 +531,7 @@ h5 {
         padding: 2px 12px;
         border-radius: 2px !important;
         margin-top: 0.7em;
+        margin-right:10px;
     }
     h4 {
         font-weight: 300 !important;
@@ -708,6 +712,7 @@ h5 {
     }
     .itenaryDetails {
         padding: 10px;
+        width:60%;
     }
     .itenaryDetails p {
         font-size: 1em;
@@ -736,6 +741,7 @@ h5 {
     .popularDest h5 {
         font-size: 0.90em;
     }
+    .slick-slider { display: table; table-layout: fixed; width: 100%; padding-right:0;} 
 }
 
 /* Css For large screen ends here */
@@ -794,6 +800,9 @@ input[type="text"] {
 .topItinaryIndv {
     max-width: 90%;
 }
+.topItinaryIndv img {
+    max-width: 100%;
+}
 .bigger {
     font-size:1.2em;
 }
@@ -838,4 +847,21 @@ input[type="text"] {
 
 .commentIndv {
     margin: 20px 0;
+}
+.marginNone {
+    margin:0 !important;
+}
+.knowMore {
+    position: relative;
+    right:10px;
+}
+@media all and (min-width: 768px) and (max-width: 1024px) {
+    .visaImg,.flightImg {
+        width: 15% !important;
+        margin-top:10px;
+    }
+    .visaDetails,.flightDetails {
+        width: 35%;
+        margin-top:10px;
+    }
 }

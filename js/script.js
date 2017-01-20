@@ -58,6 +58,10 @@ $(document).ready(function() {
     $(this).attr('title',$(this).html());
   });
 
+  //Populate form fields
+  var formContents = $('#quoteForm').html();
+  $('.form').html(formContents);
+
 });
 
 //Scroll to Section

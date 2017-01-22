@@ -67,11 +67,10 @@ ul.user-reviews li {float: left; display: block; margin-right: 1px;}
 .bookmarkContainer a {
     padding-left: 1.5em;  
 }
-.title {
+p.title {
     font-family: cd;
     font-style: italic;
-    font-size: 1.15em;
-    margin: 1em 0;
+    margin: 2em 0 1em 0;
 }
 
 .margin-top {
@@ -463,9 +462,6 @@ ul.user-reviews li {float: left; display: block; margin-right: 1px;}
         color: #fff;
         opacity: 0.8;
     }
-    .title {
-        font-size: 1.25em;
-    }
     .selectpicker {
         border: 1px solid #fff;
         height: 32px;
@@ -477,7 +473,7 @@ ul.user-reviews li {float: left; display: block; margin-right: 1px;}
         color: #fff;
         opacity: 0.8;
     }
-    .title {
+    #country .title {
         font-size: 1.5em;
     }
     .banner-bg {
@@ -505,9 +501,6 @@ ul.user-reviews li {float: left; display: block; margin-right: 1px;}
     .placeHighlights img {
         max-width: 60px;
         padding-right: 20px;
-    }
-    #country p {
-        font-size: 0.9em;
     }
     .explore-btn {
         border: 2px solid #4982c2;

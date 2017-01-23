@@ -201,6 +201,14 @@ p.title {
     border-color: #7a55a3;
 }
 
+#country .solidColor,#country .solidColor:focus,
+#country .solidColor:active,
+#country .solidColor:active:focus {
+    color: #fff !important;
+    background: #7a55a3;
+    border-color: #7a55a3;
+}
+
 #country .btn-primary:hover {
     opacity: 0.95;
 }
@@ -220,6 +228,7 @@ p.title {
 
 #country .btn-padding {
     padding: 20px 0;
+    border-radius:0;
 }
 
 #country .navbar {
@@ -419,7 +428,7 @@ p.title {
     width:50px;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
     #country h5{
         font-size: 1em;
         font-weight: bold;
@@ -437,10 +446,6 @@ p.title {
         margin-top:0;
         position: relative;
         bottom:20px;
-    }
-    .negatePadding {
-        position: relative;
-        left:-15px;
     }
     .marginRight {
         margin-right:10px;
@@ -503,8 +508,8 @@ p.title {
         padding-right: 20px;
     }
     .explore-btn {
-        border: 2px solid #4982c2;
-        color: #4982c2;
+        border: 2px solid #4982c2 !important;
+        color: #4982c2 !important;
         padding: 2px 12px;
         border-radius: 2px !important;
         margin-top: 0.7em;
@@ -785,7 +790,11 @@ p.title {
 }
 
 /* Mobile Only */
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+    .leftMargins {
+        margin-left:0px;
+        margin-right: 10px !important;
+    }
     body.country {
         padding-bottom: 70px !important;
     }
@@ -840,4 +849,8 @@ p.title {
         width: 35%;
         margin-top:10px;
     }
+    .locationName {
+        margin-top:10em !important;
+    }
 }
+

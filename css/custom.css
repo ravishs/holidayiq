@@ -792,6 +792,10 @@ p.title {
   .destinationMaster {
     padding-bottom: 70px !important;
   }
+  .topItinaryIndv {
+    margin-left: 5px;
+    border:1px solid #ddd;
+  }
   .placeHighlights {
     text-align: center;
     padding:10px 0 0px 0;
@@ -827,8 +831,16 @@ p.title {
   .search-margin {margin-left: 5px;}
   .weatherfont *{font-size: 1em !important; }
   p.title {font-size: 1em;}
-}
 
+  .minMaxContainer {
+    margin-top:1.5em;
+    margin-left:10px;
+  }
+
+}
+.visaImage img,.flightImage img {
+    width:70px !important;
+}
 .commentIndv {
   margin: 20px 0;
 }
@@ -853,3 +865,120 @@ p.title {
   }
 }
 
+.morecontent span {
+    display: none;
+}
+
+/* Weather Page */
+.weatherOverviewheading {
+    margin-top:1em;
+  }
+  
+  .weatherOverviewContainer {
+    color:#747474;
+  }
+
+  .weatherOverviewContainer ul{
+    padding-left:15px;
+    padding-top:20px;
+  }
+  .weatherOverviewContainer li {
+    margin-bottom:1em;
+  }
+  .weatherOverviewContainer h5 {
+    color:#000;
+    margin:20px 0;
+  }
+  .dark {
+    color:#333 !important;
+  }
+  .weatherSummary,.yearWeatherChart {
+    margin-top:2em;
+    margin-bottom:2em;
+  }
+  .weatherSummary img {
+    vertical-align: top;
+    display: inline-block;
+  }
+  .weatherDetails {
+    display: inline-block;
+  }
+  .weatherDetails .bigger {
+    font-size:1.5em;
+  }
+  .weatherDetails .weatherType {
+    margin-top:7px;
+    display: block;
+  }
+  .minMaxContainer {
+    display: inline-block;
+    margin-right:2em;
+  }
+  .yearWeatherChart th {
+    color:#000;
+    border-bottom: 1px solid #acacac !important;
+  }
+  .yearWeatherChart table td.weatherIcon {
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+  .yearWeatherChart table td.weatherIcon img {
+    height:22px;
+  }
+  .yearWeatherChart td,tr {
+    border:none !important;
+    font-size: 85%;
+  }
+  .yearWeatherChart {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+
+/* Visa Page */
+.visaOverviewHeading {
+    margin-top:1em;
+  }
+  
+  .visaOverviewContainer {
+    color:#747474;
+  }
+
+  .visaOverviewContainer ul{
+    padding-left:15px;
+    padding-top:20px;
+  }
+  .visaOverviewContainer li {
+    margin-bottom:1em;
+  }
+  .visaOverviewContainer h5 {
+    color:#000;
+    margin:20px 0;
+  }
+  
+/* Do's and Dont's */
+
+.doDontsHeading {
+    margin-top:1em;
+}
+.dosDontsContainer {
+    color:#747474;
+}
+.dosDontsContainer ul{
+    padding-left:15px;
+    padding-top:10px;
+}
+.dosDontsContainer li {
+    margin-bottom:1em;
+}
+.greenHeading {
+    color:#54c22d;
+}
+.greenHeading i {
+    color: #54c22d !important;
+}
+.redHeading {
+    color:#b21310;
+}
+.redHeading i{
+    color:#b21310 !important;
+}

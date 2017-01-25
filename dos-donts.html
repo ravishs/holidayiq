@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>HolidayIQ</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/slick.css" rel="stylesheet">
+  <link href="css/hover.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/custom.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+  <div class = "destinationMaster">
+    <!-- NavBar -->
+    <nav class="navbar navbar-fixed-top hidden-xs">
+      <div class="container">
+
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="javascript:void(0);">
+            <img alt = "HolidayIQ" src = "images/holidayiq-logo.png" />
+          </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">International</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Add Review</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search HolidayIQ...">
+              </div>
+            </form>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class = "clearNav hidden-xs"></div>
+
+    <!-- Banner -->
+    <div class="primary-banner">
+      <div class="row top-padding">
+        <div class="visible-xs container transBg">
+          <div class="col-xs-7">
+            <a href="#"><img src="images/back_white.png" width="20" alt="back"></a>
+          </div>
+          <div class="col-xs-5 text-right bookmarkContainer">
+            <a href = "javascript:void(0);" class = "animateOnClick"><img onClick = "bookmark(this);" src="images/been.png" width="20" alt="been"></a>
+            <a href = "javascript:void(0);" class = "animateOnClick"><img onClick = "like(this);" src="images/like.png" width="30" alt="like"></a>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class = "container transBg relative">
+          <div class="col-xs-6 negatePadding" id = "destMain">
+            <h3 class="locationName">Thailand</h3>
+            <div class="locationRating">
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star" aria-hidden="true"></i>
+              <i class="fa fa-star-half-o" aria-hidden="true"></i>
+              <span class="white"><b>4.5/5</b></span>
+              <div class="clearfix top-padding">
+                <span class = "hidden-xs clearfix"> <!-- needs fix for padding -->
+                  <a href = "javascript:void(0);" class = "animateOnClick bigger" onClick = "beenHere(this)">
+                    <span class = "blackStrip">
+                      <img alt = "" src = "images/been-here.png" />
+                      <span>Been Here</span>
+                    </span>
+                  </a>
+                  <a href = "javascript:void(0);" class = "animateOnClick bigger" onClick = "addToWishList(this)">
+                    <span class = "blackStrip">
+                      <img alt = "" src = "images/like.png" />
+                      <span class = "msg">Add To WishList</span>
+                    </span>
+                  </a>
+                </span>
+              </div>  
+            </div>
+          </div>
+          <div class="col-xs-6 text-right" id="quicklinks">
+           <div class="photoVideoCount">
+            <span class = "blackStrip pvCount leftMargins">
+              <img alt = "" src="images/photos.png" width = "20" /> 
+              <span>45</span>
+            </span>
+            <span class = "blackStrip pvCount leftMargins">
+              <img alt = "" src="images/play.png" /> 
+              <span>7</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Component: Banner -->
+
+  <!-- Main Contents -->
+  <div class = "container">
+    <div class = "row">
+      <!-- Left Pane  -->
+      <div class = "col-md-8 col-sm-8 col-xs-12 leftPane dosDontsContainer">
+        <h3 class = "light doDontsHeading">Do's and Dont's</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        </p>
+        <h3 class = "greenHeading light"><i class = "fa fa-check" aria-hidden="true"></i>&nbsp;&nbsp;Do's</h3>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+        <h3 class = "redHeading light"><i class="fa fa-times" aria-hidden="true"></i>&nbsp;&nbsp;Dont's</h3>
+        <ul>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        </ul>
+      </div> <!-- LHS:  -->
+
+      <!-- RHS -->
+      <div class = "col-md-3 col-md-offset-1 col-sm-4 sidePanel hidden-xs">
+        <h3>Get a free travel guide!</h3>
+        <small class = "smaller">We have a customized travel guide waiting for you</small>
+        <div class = "form"></div>
+        <!-- popular thailand -->
+        <div class="row popularDest">
+          <div class="marginMed">
+            <div class="col-md-12 text-center" id="profilepic">
+              <h5 class="primary text-center">Thailand seems to be very popular this season!</h5>
+              <img src="http://lorempixel.com/42/42/people/7" alt="..." class="img-circle">
+              <img src="http://lorempixel.com/42/42/people/1" alt="..." class="img-circle">
+              <img src="http://lorempixel.com/42/42/people/2" alt="..." class="img-circle">
+              <img src="http://lorempixel.com/42/42/people/5" alt="..." class="img-circle">
+              <img src="http://lorempixel.com/42/42/people/6" alt="..." class="img-circle"><span><small>150+</small></span>
+              <p class="margin-top">150 Travellers have planned their trip to Thailand this month</p>
+            </div>
+          </div>
+        </div>
+        <!-- popular thailand ends -->
+        <div class="row marginMed">
+          <h5 class = "light">Thailand Photos</h5>
+          <div class="row">
+            <div class="marginMed image-gallery">
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+              <div class="col-md-3 col-sm-3"><img class = "img-responsive  thumbnail" src="images/imgmed.png" /></div>
+            </div>
+          </div>
+        </div> <!-- Thailand Photos end -->
+      </div> <!-- RHS -->
+    </div>
+  </div> <!-- Container -->
+</div>
+
+
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<!-- <script src="js/bootstrap.min.js"></script> -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<script src="js/slick.js"></script>
+<script src="js/script.js"></script>
+
+
+<!-- Quote Form: Common -->
+<form id = "quoteForm" style = "display:none;">
+  <div class="form-group marginMed">
+    <label class = "light greyText">Enter Destination</label>
+    <input type="text" class="form-control" id="" placeholder="Thailand">
+    <div class="row top-padding">
+      <div class="col-md-8 col-xs-8">
+        <label class = "light greyText">I am travelling</label>
+        <select class="selectpicker borderDark">
+          <option value="">In the next month</option>
+        </select>
+      </div>
+      <div class="col-md-4 col-xs-4">
+        <label class = "light greyText">People</label>
+        <select class="selectpicker borderDark">
+          <option value="">2</option>
+        </select>
+      </div>
+    </div>
+    <div class="row marginMed">
+      <div class="col-md-12">
+        <h5 class = "light">My contact details</h5>
+        <p><input type="text" class="form-control" id="" placeholder="Name*"></p>
+        <p><input type="email" class="form-control" id="" placeholder="Email Id*"></p>
+        <p><input type="text" class="form-control" id="" placeholder="Source City*"></p>
+        <p><a class="btn btn-primary btn-block roundBtn" href="#" role="button">Send me my free travel guide</a></p>
+      </div>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

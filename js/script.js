@@ -35,23 +35,25 @@ $(document).ready(function() {
 
   //Mobile: Sticky Nav
   var $ele = $('#stickyNav');
-  var vTop = $ele.offset().top - parseFloat($ele.css('margin-top').replace(/auto/, 0));
-  $(window).scroll(function (event) {
-    var y = $(this).scrollTop();
-    if (y >= vTop -65) {      
-      $ele.addClass('stick');
-    } else {
-      $ele.removeClass('stick');
-    }
-    // Highlight Nav on scroll
-    $('.sectionWrap').each(function() {
-      if($(window).scrollTop() >= $(this).offset().top -60) {
-        var id = $(this).attr('id');
-        $('ul.nav-tabs li').removeClass('active');
-        $('ul.nav-tabs li[data-target='+ id +']').addClass('active');
+  if ($ele.length > 0) {
+    var vTop = $ele.offset().top - parseFloat($ele.css('margin-top').replace(/auto/, 0));
+    $(window).scroll(function (event) {
+      var y = $(this).scrollTop();
+      if (y >= vTop -65) {      
+        $ele.addClass('stick');
+      } else {
+        $ele.removeClass('stick');
       }
+      // Highlight Nav on scroll
+      $('.sectionWrap').each(function() {
+        if($(window).scrollTop() >= $(this).offset().top -60) {
+          var id = $(this).attr('id');
+          $('ul.nav-tabs li').removeClass('active');
+          $('ul.nav-tabs li[data-target='+ id +']').addClass('active');
+        }
+      });
     });
-  });
+  }
 
   //Tooltips
   $('.documentItem h5').each(function() {
@@ -61,6 +63,39 @@ $(document).ready(function() {
   //Populate form fields
   var formContents = $('#quoteForm').html();
   $('.form').html(formContents);
+
+  //Read More: Weather 
+  var showChar = 500;
+  var ellipsestext = "...";
+  var moretext = "Read More";
+  var lesstext = "Read Less";
+
+  $('.more').each(function() {
+    var content = $(this).html();
+
+    if(content.length > showChar) {
+
+      var c = content.substr(0, showChar);
+      var h = content.substr(showChar, content.length - showChar);
+      var html = c + '<span class="moreellipses">' + ellipsestext+ '&nbsp;</span><span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">' + moretext + '</a></span>';
+      $(this).html(html);
+    }
+ 
+  });
+ 
+  $(".morelink").click(function(){
+    if($(this).hasClass("less")) {
+        $(this).removeClass("less");
+        $(this).html(moretext);
+    } else {
+        $(this).addClass("less");
+        $(this).html(lesstext);
+    }
+    $(this).parent().prev().toggle();
+    $(this).prev().toggle();
+    return false;
+  });
+
 
 });
 

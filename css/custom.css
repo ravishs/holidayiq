@@ -72,6 +72,7 @@ p.title {
   font-family: cd;
   font-style: italic;
   margin: 2em 0 1em 0;
+  font-size: 1.25em;
 }
 
 .margin-top {
@@ -825,6 +826,7 @@ p.title {
   #ta h5,#ta p,#vr h5,#vr p {margin-left: 5px;}
   .search-margin {margin-left: 5px;}
   .weatherfont *{font-size: 1em !important; }
+  p.title {font-size: 1em;}
 }
 
 .commentIndv {

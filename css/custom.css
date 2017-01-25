@@ -1007,6 +1007,10 @@ and (orientation: portrait) {
     .knowMore {
         right:40px;
     }
+    .playVideo {
+      top:20%;
+      left:25%;
+    }
 }
 
 @media only screen 
@@ -1030,6 +1034,10 @@ and (orientation: landscape) {
     .knowMore {
         right:20px;
     }
+    .playVideo {
+      top:30%;
+      left:35%;
+    }
 }
 
 @media only screen 
@@ -1051,5 +1059,9 @@ and (orientation: portrait) {
     }
     .knowMore {
         right:20px;
+    }
+    .playVideo {
+      top:30%;
+      left:30%;
     }
 }
